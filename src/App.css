@@ -1,38 +1,95 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@700&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+  font-family: 'Handjet', cursive;
+}
+
+p {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div:not(#display) {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.calculator {
+  width: 30%;
+  margin-top: 5em;
+  font-size: xxx-large;
+  font-weight: bold;
+  border: 5px solid #212121;
+  background-color: #50717b;
+}
+
+.buttons {
+  display: grid;
+  border-top: 5px solid #212121;
+
+}
+
+#clear {
+  grid-column: 1/3;
+  background-color: #f23557;
+}
+
+#divide {
+  grid-column: 3/4;
+}
+
+#multiple {
+  grid-column: 4/5;
+}
+
+#zero {
+  grid-column: 1/3;
+}
+
+#equals {
+  grid-column: 4/5;
+  grid-row: 4/6;
+  background-color: #22b2da;
+}
+
+.buttons div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #212121;
+  background-color: #8ecccc;
+  margin: 5px;
+}
+
+
+
+#display, .formula {
+  text-align: end;
+  background-color: #3a4042;
+  padding-right: .5em;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.formula {
+  border-bottom: 5px solid #212121;
+  font-size: .7em;
+  color: orange;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.big {
+  font-size: xxxx-large;
 }
