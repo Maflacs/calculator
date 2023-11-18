@@ -35,8 +35,9 @@ function App() {
 
   const calculateResult = () => {
     try {
-      const calculate = new Function('return' + formula);
+      const calculate = new Function('return ' + formula);
       const result = calculate();
+
       setFormula(result.toString());
       setDisplayText(result.toString());
     } catch (error) {
